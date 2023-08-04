@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+      <title>Calculator</title>
+      <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+
+    <script >
+
+            function Clear() {
+                document.getElementById("total").value = "";
+            }
+
+            function Show(value) {
+                document.getElementById("total").value += value;
+            }
+
+            function cal() {
+                var values = document.getElementById("total").value;
+                var result = eval(values);
+                document.getElementById("total").value = result;
+            }
+    </script>
+
+        
+        
+        <table id="calculator" >
+          <tr>
+            <td colspan="3"> <input  type="text" id="total" disabled /> </td>
+            <td> <button type="button" onclick="Clear()" id="btn">C</button> </td>
+          </tr>
+          <tr>
+
+            <td> <button id="btn_cal" type="button"  onclick="Show('1')">1</button> </td>
+            <td> <button id="btn_cal" type="button"  onclick="Show('2')">2</button> </td>
+            <td> <button id="btn_cal" type="button"  onclick="Show('3')" >3</button> </td>
+            <td> <button id="btn_cal" type="button"  onclick="Show('/')">/</button> </td>
+          </tr>
+          <tr>
+            <td> <button id="btn_cal" type="button"  onclick="Show('4')">4</button> </td>
+            <td> <button id="btn_cal" type="button"  onclick="Show('5')">5</button> </td>
+            <td> <button id="btn_cal" type="button"  onclick="Show('6')" >6</button> </td>
+            <td> <button id="btn_cal" type="button"  onclick="Show('*')">*</button> </td>
+          </tr>
+          <tr>
+            <td> <button id="btn_cal" type="button"  onclick="Show('7')">7</button> </td>
+            <td> <button id="btn_cal" type="button"  onclick="Show('8')">8</button> </td>
+            <td> <button id="btn_cal" type="button"  onclick="Show('9')" >9</button> </td>
+            <td> <button id="btn_cal" type="button"  onclick="Show('+')">+</button> </td>
+          </tr>
+          <tr>
+            <td> <button id="btn_cal" type="button"  onclick="Show('.')">.</button> </td>
+            <td> <button id="btn_cal" type="button"  onclick="Show('0')">0</button> </td>
+            <td> <button type="button"  onclick="cal()" id="btn"  >=</button> </td>
+            <td> <button id="btn_cal" type="button"  onclick="Show('-')">-</button> </td>
+              
+          </tr>
+        </table>
+    </body>
+</html>
